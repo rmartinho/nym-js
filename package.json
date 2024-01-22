@@ -1,0 +1,46 @@
+{
+  "name": "@rmf1723/nym",
+  "version": "0.1.0",
+  "description": "A pseudonym system",
+  "type": "module",
+  "main": "dist/nym.js",
+  "types": "dist/nym.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "npm run build:clean; tsc",
+    "build:clean": "rm dist/* 2> /dev/null",
+    "lint": "prettier --check 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "format": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmartinho/nym-js.git"
+  },
+  "keywords": [
+    "cryptography",
+    "security",
+    "privacy",
+    "pseudonym",
+    "nym"
+  ],
+  "author": "rmf",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rmartinho/nym-js/issues"
+  },
+  "homepage": "https://github.com/rmartinho/nym-js#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "async-sema": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "@rmf1723/merlin": "^0.1.3",
+    "@rmf1723/ristretto255": "^0.1.8",
+    "@rmf1723/schnorrkel": "^0.1.1"
+  }
+}
